@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        label {
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p>Formulário</p>
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required> 
+            <!-- o required impede do form ser enviado caso o campo não esteja preenchido-->
+        </p>
+
+        <p>
+            <label for="dev">Sou um dev</label>
+            <input type="checkbox" id="dev" name="dev" value="sim" checked> 
+            <!--Por ex, ao marcar a opção do checkbox, chegaria no servidor o nome dev e o valor sim | a opção checked 
+                faz com que o quadrado esteja preenchido por padrão, podendo ser despreenchido-->
+        </p>
+
+        <p>
+            Gênero: <br>
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="feminino" name="Genero" value="feminino"> 
+
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="masculino" name="Genero" value="masculino"> 
+
+            <label for="outro">Outro</label>
+            <input type="radio" id="outro" name="Genero" value="outro"> 
+
+            <!--neste caso, o name deve ser igual para todos, dessa maneira consigo agrupá-los, removendo a 
+                possibilidade de marcar mais de opção --> 
+        </p>
+
+        <p>
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" value="2020-04-20"> 
+            <!--neste caso, a data 20/04/2020 aparecerá como padrão-->
+        </p>
+
+        <p>
+            <label for="datalocal">Data</label>
+            <input type="datetime-local" id="datalocal" name="datalocal" value="2020-04-20T20:00">
+        </p>
+
+        <p>
+            <label for="time">Horário</label>
+            <input type="time" id="time" name="time" value="20:20:01"> 
+        </p>
+
+        <p>
+            <label for="cor">Cor preferida</label>
+            <input type="color" id="cor" name="cor" value="#FF0000"> 
+        </p>
+
+        <p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="xxx.kk@gmail.com"> 
+        </p>
+
+        <p>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha"> 
+        </p>
+
+        <p>
+            <label for="range">Range</label>
+            <input type="range" id="range" name="range" min="0" max="10" step="2"> 
+        </p>
+
+        <p>
+            <label for="foto">Sua foto</label>
+            <input type="file" id="foto" name="foto" accept=".png, .mp4, image/*" multiple>
+            <!--multiple: permite a seleção de vários arquivos ao mesmo tempo-->
+        </p>
+
+        <p>
+            <label for="number">Número</label>
+            <input type="number" id="number" name="number" min="21" max="44" step="2">
+            <!--esse input também aceita placeholder | step: indica de quanto em quanto o número vai aumentar-->
+        </p>
+
+        <input type="range" list="tickmarks">
+        <datalist id="tickmarks">
+            <option value="0" label="0%">
+            <option value="10">
+            <option value="20">
+            <option value="30">
+            <option value="40">
+            <option value="50" label="50%">
+            <option value="60">
+            <option value="70">
+            <option value="80">
+            <option value="90">
+            <option value="100" label="100%">
+                <!--o label deveria aparecer nas marcações mas o navegador não reconhece-->
+        </datalist>
+
+        <p>
+            <label for="url">Sua URL:</label>
+            <input type="url" id="url" name="url" placeholder="URL"> 
+        </p>
+
+        <p>
+            <label for="select">Selecione uma opção:</label>
+            <select name="select" id="select" multiple> <!--multiple = selecionar vários opções-->
+                <optgroup label="Cores"> <!--optgroup = agrupamento de opções-->
+                <option value="cor-1" label="Verde"> 
+                <option value="cor-2" label="Azul" selected> <!--já virá selecionado por padrão-->
+                <option value="cor-3" label="Amarelo" disabled>
+                </optgroup>
+
+                <optgroup label="Formas">
+                    <option value="forma-1" label="Quadrado"> 
+                    <option value="forma-2" label="Círculo"> 
+                    <option value="forma-3" label="Retângulo">
+                    </optgroup>
+            </select>
+            <!--Aparecerá para o usuário o label do option; o que aparecerá no servidor será o name do select e o value do option-->
+        </p>
+
+        <p>
+            <label for="search">Encontre o que precisa</label>
+            <input type="search" id="search" name="search" placeholder="pesquisar"> 
+        </p>
+
+        <p>
+            <label for="textarea">Escreva sua mensagem</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </p>
+        
+
+        <p>
+            <button type="reset">Resetar</button>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>  
+
+    
+    
+</body>
+</html>

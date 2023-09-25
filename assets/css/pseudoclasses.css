@@ -1,0 +1,46 @@
+.heading {
+    transition: all 1s ease-in-out;
+}
+
+.heading:hover {
+    background-color: blue;
+}
+
+a {
+    color: orange; /*todos os links laranjas*/
+}
+
+a:link {
+    color: deeppink; /*links nunca visitados ficam rosa*/
+}
+
+a:visited {
+    color: greenyellow; /*links já visitados ficam verde limão*/
+}
+
+a:hover {
+    background-color: darkcyan;
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    background-color: darkgoldenrod;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:checked {
+    width: 50px;
+    height: 50px;
+}
+
+input:not(:checked) + p {
+    background-color: blueviolet; /*quando o input não estiver com check, o próximo <p> ficará com o fundo roxo*/
+}

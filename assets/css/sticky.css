@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+}
+
+.pai {
+    height: 300vh;
+}
+
+ul {
+    height: 100px;
+    overflow-y: auto;
+}
+
+ul li.sticky {
+    position: sticky; /*os elementos com essa classe ficam "presas" no top e elas rolam 
+    até encontrar outro elemento com essa mesma classe, o qual terá o mesmo comportamento*/
+    background: gray;
+    top: 0;
+}

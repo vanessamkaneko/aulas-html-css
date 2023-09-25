@@ -1,0 +1,27 @@
+ul li::after {
+    content: '*';
+    background-color: aquamarine;
+}
+
+ul li::before {
+    content: '♥';
+    background-color: deeppink;
+}
+
+
+p::first-letter {
+    font-size: 20px;
+    font-style: oblique;
+}
+
+p::first-line {
+    background-color: darkmagenta;
+}
+
+p::selection {
+    background-color: red;
+}
+
+.form-field::placeholder {
+    color: aqua;
+}
